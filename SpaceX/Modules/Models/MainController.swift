@@ -18,7 +18,9 @@ final class MainController: UIViewController {
         titleLabel.text = "Launches"
         titleLabel.font = UIFont(name: C.Fonts.latoBold, size: 25)
 
-        let leftSpacer = UIBarButtonItem(customView: .init(frame: .init(x: 0, y: 0, width: 9, height: 0)))
+        let leftSpacer = UIBarButtonItem(customView:
+                .init(frame: .init(x: 0, y: 0, width: 7, height: 0))
+        )
         
         navigationItem.leftBarButtonItems = [
             leftSpacer,
@@ -43,7 +45,9 @@ final class MainController: UIViewController {
         stackView.spacing = 35
         
         let rightStackView = UIBarButtonItem(customView: stackView)
-        let rightSpacer = UIBarButtonItem(customView: .init(frame: .init(x: 0, y: 0, width: 5, height: 0)))
+        let rightSpacer = UIBarButtonItem(customView:
+                .init(frame: .init(x: 0, y: 0, width: 7, height: 0))
+        )
 
         navigationItem.rightBarButtonItems = [rightSpacer, rightStackView]
     }

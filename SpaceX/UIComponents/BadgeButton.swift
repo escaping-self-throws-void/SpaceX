@@ -15,22 +15,17 @@ protocol BadgeContainer: AnyObject {
 }
 
 extension BadgeContainer where Self: UIView {
+    
     func showBadge(text: String?) {
+        guard badgeView == nil else { return }
         
-        if let badgeView = badgeView, !badgeView.isHidden {
-            return
-        } else {
-            badgeView = UIView()
-        }
-        
+        badgeView = UIView()
+
         badgeView?.backgroundColor = UIColor(named: C.Colors.goldenAccent)
         
-        guard let badgeViewUnwrapped = badgeView else {
-            return
-        }
+        guard let badgeViewUnwrapped = badgeView else { return }
 
-        addSubview(badgeViewUnwrapped)
-        badgeViewUnwrapped.translatesAutoresizingMaskIntoConstraints = false
+        badgeViewUnwrapped.place(on: self)
         
         var size = CGFloat(6)
         
@@ -41,24 +36,17 @@ extension BadgeContainer where Self: UIView {
             labelUnwrapped.textAlignment = .center
             labelUnwrapped.textColor = .white
             labelUnwrapped.font = UIFont(name: C.Fonts.latoRegular, size: 15)
-            labelUnwrapped.translatesAutoresizingMaskIntoConstraints = false
-            
-            badgeViewUnwrapped.addSubview(labelUnwrapped)
-            let labelConstrainst = [labelUnwrapped.centerXAnchor.constraint(equalTo: badgeViewUnwrapped.centerXAnchor),
-                                    labelUnwrapped.centerYAnchor.constraint(equalTo: badgeViewUnwrapped.centerYAnchor)]
-            NSLayoutConstraint.activate(labelConstrainst)
+            labelUnwrapped.place(on: badgeViewUnwrapped).pin(.centerX, .centerY)
             
             size = CGFloat(20 + 2 * textUnwrapped.count)
         }
         
-        let sizeConstraints = [badgeViewUnwrapped.widthAnchor.constraint(equalToConstant: size), badgeViewUnwrapped.heightAnchor.constraint(equalToConstant: size)]
-        NSLayoutConstraint.activate(sizeConstraints)
-        
         badgeViewUnwrapped.cornerRadius = size / 2
         
-        let position = [badgeViewUnwrapped.topAnchor.constraint(equalTo: self.topAnchor, constant: -size / 2),
-                        badgeViewUnwrapped.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: size/2)]
-        NSLayoutConstraint.activate(position)
+        badgeViewUnwrapped.pin(.fixedWidth(size),
+                               .fixedHeight(size),
+                               .top(padding: -size / 2),
+                               .trailing(padding: -size / 2))
     }
     
     func hideBadge() {
