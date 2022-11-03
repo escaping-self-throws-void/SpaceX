@@ -16,6 +16,7 @@ enum C {
     enum Images {
         static let bellIcon = "bellIcon"
         static let searchIcon = "searchIcon"
+        static let bottomImage = "bottomImage"
     }
     
     enum Colors {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UITableViewCell {
+extension UICollectionViewCell {
     func removeSubviews() {
         contentView.subviews.forEach { $0.removeFromSuperview() }
     }

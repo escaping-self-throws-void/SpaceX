@@ -8,55 +8,34 @@
 import UIKit
 
 protocol BadgeContainer: AnyObject {
-    var badgeView: UIView? { get set }
-    var badgeLabel: UILabel? { get set }
     func showBadge(text: String?)
-    func hideBadge()
 }
 
 extension BadgeContainer where Self: UIView {
     
     func showBadge(text: String?) {
-        guard badgeView == nil else { return }
+        let badgeLabel = UILabel()
+        badgeLabel.backgroundColor = UIColor(named: C.Colors.goldenAccent)
         
-        badgeView = UIView()
-
-        badgeView?.backgroundColor = UIColor(named: C.Colors.goldenAccent)
+        var size = CGFloat(20)
         
-        guard let badgeViewUnwrapped = badgeView else { return }
-
-        badgeViewUnwrapped.place(on: self)
-        
-        var size = CGFloat(6)
-        
-        if let textUnwrapped = text {
-            let labelUnwrapped = badgeLabel ?? UILabel()
+        if let text {
+            badgeLabel.text = text
+            badgeLabel.textAlignment = .center
+            badgeLabel.textColor = .white
+            badgeLabel.font = UIFont(name: C.Fonts.latoRegular, size: 15)
             
-            labelUnwrapped.text = textUnwrapped
-            labelUnwrapped.textAlignment = .center
-            labelUnwrapped.textColor = .white
-            labelUnwrapped.font = UIFont(name: C.Fonts.latoRegular, size: 15)
-            labelUnwrapped.place(on: badgeViewUnwrapped).pin(.centerX, .centerY)
-            
-            size = CGFloat(20 + 2 * textUnwrapped.count)
+            size = CGFloat(20 + 2 * text.count)
         }
         
-        badgeViewUnwrapped.cornerRadius = size / 2
+        badgeLabel.clipsToBounds = true
+        badgeLabel.cornerRadius = size / 2
+        badgeLabel.place(on: self).pin(.fixedWidth(size),
+                                           .fixedHeight(size),
+                                           .top(padding: -size / 2),
+                                           .trailing(padding: -size / 2))
         
-        badgeViewUnwrapped.pin(.fixedWidth(size),
-                               .fixedHeight(size),
-                               .top(padding: -size / 2),
-                               .trailing(padding: -size / 2))
-    }
-    
-    func hideBadge() {
-        badgeView?.removeFromSuperview()
-        badgeView = nil
-        badgeLabel = nil
     }
 }
 
-final class BadgeButton: UIButton, BadgeContainer {
-    var badgeView: UIView?
-    var badgeLabel: UILabel?
-}
+final class BadgeButton: UIButton, BadgeContainer {}
