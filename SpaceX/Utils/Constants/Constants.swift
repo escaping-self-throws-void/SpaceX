@@ -14,9 +14,10 @@ enum C {
     }
     
     enum Images {
-        static let bellIcon = "bellIcon"
-        static let searchIcon = "searchIcon"
-        static let bottomImage = "bottomImage"
+        static let bell = "bellIcon"
+        static let search = "searchIcon"
+        static let bottom = "bottomImage"
+        static let avatar = "avatarImage"
     }
     
     enum Colors {

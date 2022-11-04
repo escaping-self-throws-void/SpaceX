@@ -30,7 +30,7 @@ final class LaunchCollectionView: UICollectionView {
     
     private func setup() {
         showsHorizontalScrollIndicator = false
-        
+        showsVerticalScrollIndicator = false
         register(LaunchCell.self, forCellWithReuseIdentifier: LaunchCell.reuseIdentifier)
     }
 }

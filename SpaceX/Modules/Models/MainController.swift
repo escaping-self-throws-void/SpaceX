@@ -19,17 +19,28 @@ final class MainController: UIViewController {
         collectionView.place(on: view).pin(
             .top(to: view.safeAreaLayoutGuide, padding: 15),
                 .fixedHeight(250),
-                .fixedWidth(view.bounds.width))
+            .leading,
+            .trailing
+        )
         return collectionView
     }()
+    
+    private let mainView = MainView()
+    
+    override func loadView() {
+        view = mainView
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupNavBar()
         addCollection()
-        addBottomView()
-        addBottomImage()
     }
 
     init(_ viewModel: MainViewModelProtocol) {
@@ -57,11 +68,11 @@ extension MainController {
         navigationItem.leftBarButtonItems = [leftSpacer, .init(customView: titleLabel)]
         
         let searchButton = UIButton(type: .custom)
-        let searchImage = UIImage(named: C.Images.searchIcon)
+        let searchImage = UIImage(named: C.Images.search)
         searchButton.setImage(searchImage, for: .normal)
         searchButton.frame = .init(x: 0, y: 0, width: 16, height: 16)
         
-        let bellImage = UIImage(named: C.Images.bellIcon)
+        let bellImage = UIImage(named: C.Images.bell)
         let bellButton = BadgeButton()
         bellButton.showBadge(text: "2")
         bellButton.setImage(bellImage, for: .normal)
@@ -80,27 +91,6 @@ extension MainController {
         navigationItem.rightBarButtonItems = [rightSpacer, rightStackView]
     }
     
-    private func addBottomView() {
-        let bottomView = UIView()
-        bottomView.backgroundColor = UIColor(named: C.Colors.goldenAccent)
-        bottomView.place(on: view).pin(
-            .bottom,
-            .fixedHeight(278),
-            .fixedWidth(view.bounds.width)
-        )
-    }
-    
-    private func addBottomImage() {
-        let bottomImage = UIImageView()
-        bottomImage.image = UIImage(named: C.Images.bottomImage)
-        
-        bottomImage.place(on: view).pin(
-            .fixedHeight(213),
-            .leading(padding: 25),
-            .trailing(padding: 15),
-            .bottom(padding: 150)
-        )
-    }
 }
 
 // MARK: - CollectionView Delegate and Data Source

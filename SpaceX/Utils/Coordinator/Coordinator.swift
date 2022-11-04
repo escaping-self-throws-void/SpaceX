@@ -23,7 +23,7 @@ class BaseCoordinator: Coordinator {
     var navigationController = UINavigationController()
     
     func start() {
-        fatalError("Start method must be implemented")
+        precondition(false, "Has to be overridden")
     }
     
     func start(_ coordinator: Coordinator) {

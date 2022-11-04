@@ -37,6 +37,9 @@
 		CFCD56AD2912CFD9006BAE51 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD56AC2912CFD9006BAE51 /* MainController.swift */; };
 		CFCD56B22912CFE1006BAE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFCD56B12912CFE1006BAE51 /* Assets.xcassets */; };
 		CFCD56B52912CFE1006BAE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFCD56B32912CFE1006BAE51 /* LaunchScreen.storyboard */; };
+		CFCF33CF29159D73001A8E04 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF33CE29159D73001A8E04 /* MainView.swift */; };
+		CFCF33D12915B30C001A8E04 /* BigLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF33D02915B30C001A8E04 /* BigLaunchView.swift */; };
+		CFCF33D32915C79C001A8E04 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF33D22915C79C001A8E04 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		CFCD56B12912CFE1006BAE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFCD56B42912CFE1006BAE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFCD56B62912CFE1006BAE51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFCF33CE29159D73001A8E04 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CFCF33D02915B30C001A8E04 /* BigLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigLaunchView.swift; sourceTree = "<group>"; };
+		CFCF33D22915C79C001A8E04 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +91,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CF1946EC291450B500A83E6B /* Views */ = {
+		CF1946EC291450B500A83E6B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				CF1946EE2914510000A83E6B /* LaunchCell.swift */,
 			);
-			path = Views;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CF1CAB7A2912D6860050A61F /* Services */ = {
@@ -147,7 +153,8 @@
 		CF1CAB8A2912D8670050A61F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				CF1946EC291450B500A83E6B /* Views */,
+				CFCF33CD29159D55001A8E04 /* UI */,
+				CF1946EC291450B500A83E6B /* Cell */,
 				CF1CAB8C2912D8AF0050A61F /* MainCoordinator.swift */,
 				CF1CAB8F2912D9830050A61F /* MainViewModel.swift */,
 				CFCD56AC2912CFD9006BAE51 /* MainController.swift */,
@@ -268,6 +275,16 @@
 			path = SpaceX;
 			sourceTree = "<group>";
 		};
+		CFCF33CD29159D55001A8E04 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CFCF33CE29159D73001A8E04 /* MainView.swift */,
+				CFCF33D02915B30C001A8E04 /* BigLaunchView.swift */,
+				CFCF33D22915C79C001A8E04 /* File.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -353,6 +370,7 @@
 				CF1CAB832912D7A90050A61F /* AutoLayoutDSL.swift in Sources */,
 				CF1CAB922912D9A50050A61F /* DetailsViewController.swift in Sources */,
 				CFCD56A92912CFD9006BAE51 /* AppDelegate.swift in Sources */,
+				CFCF33CF29159D73001A8E04 /* MainView.swift in Sources */,
 				CFCD56AB2912CFD9006BAE51 /* SceneDelegate.swift in Sources */,
 				CF1CABB82912FC280050A61F /* UIView+Extensions.swift in Sources */,
 				CF3B3F2429145F440092CA79 /* LaunchCollectionView.swift in Sources */,
@@ -363,8 +381,10 @@
 				CF1CAB992912DA5C0050A61F /* NetError.swift in Sources */,
 				CF1CAB892912D8490050A61F /* BaseCoordinator.swift in Sources */,
 				CF1CABB22912E7860050A61F /* Constants.swift in Sources */,
+				CFCF33D32915C79C001A8E04 /* File.swift in Sources */,
 				CF1CAB962912DA2E0050A61F /* NetworkService.swift in Sources */,
 				CF1946EF2914510000A83E6B /* LaunchCell.swift in Sources */,
+				CFCF33D12915B30C001A8E04 /* BigLaunchView.swift in Sources */,
 				CF1CAB942912D9C30050A61F /* DetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
