@@ -11,20 +11,6 @@ final class MainController: UIViewController {
     
     private let viewModel: MainViewModelProtocol
     
-    private lazy var collectionView: LaunchCollectionView = {
-
-        let collectionView = LaunchCollectionView()
-        collectionView.backgroundColor = UIColor.red
-        
-        collectionView.place(on: view).pin(
-            .top(to: view.safeAreaLayoutGuide, padding: 15),
-                .fixedHeight(250),
-            .leading,
-            .trailing
-        )
-        return collectionView
-    }()
-    
     private let mainView = MainView()
     
     override func loadView() {
@@ -98,8 +84,8 @@ extension MainController {
 extension MainController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     private func addCollection() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        mainView.collectionView.delegate = self
+        mainView.collectionView.dataSource = self
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

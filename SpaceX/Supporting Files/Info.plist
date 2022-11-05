@@ -4,6 +4,22 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Fontspring-DEMO-visbycf-demibold.otf</string>
+		<string>Fontspring-DEMO-visbycf-light.otf</string>
+		<string>Fontspring-DEMO-visbycf-heavyoblique.otf</string>
+		<string>Fontspring-DEMO-visbycf-medium.otf</string>
+		<string>Fontspring-DEMO-visbycf-lightoblique.otf</string>
+		<string>Fontspring-DEMO-visbycf-heavy.otf</string>
+		<string>Fontspring-DEMO-visbycf-regularoblique.otf</string>
+		<string>Fontspring-DEMO-visbycf-bold.otf</string>
+		<string>Fontspring-DEMO-visbycf-thinoblique.otf</string>
+		<string>Fontspring-DEMO-visbycf-thin.otf</string>
+		<string>Fontspring-DEMO-visbycf-mediumoblique.otf</string>
+		<string>Fontspring-DEMO-visbycf-extraboldoblique.otf</string>
+		<string>Fontspring-DEMO-visbycf-regular.otf</string>
+		<string>Fontspring-DEMO-visbycf-boldoblique.otf</string>
+		<string>Fontspring-DEMO-visbycf-demiboldoblique.otf</string>
+		<string>Fontspring-DEMO-visbycf-extrabold.otf</string>
 		<string>Lato-Italic.ttf</string>
 		<string>Lato-LightItalic.ttf</string>
 		<string>Lato-Thin.ttf</string>

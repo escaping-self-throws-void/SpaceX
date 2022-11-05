@@ -39,7 +39,29 @@
 		CFCD56B52912CFE1006BAE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFCD56B32912CFE1006BAE51 /* LaunchScreen.storyboard */; };
 		CFCF33CF29159D73001A8E04 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF33CE29159D73001A8E04 /* MainView.swift */; };
 		CFCF33D12915B30C001A8E04 /* BigLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF33D02915B30C001A8E04 /* BigLaunchView.swift */; };
-		CFCF33D32915C79C001A8E04 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF33D22915C79C001A8E04 /* File.swift */; };
+		CFCF33D32915C79C001A8E04 /* BorderedAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF33D22915C79C001A8E04 /* BorderedAvatarView.swift */; };
+		CFCF33EB2916842F001A8E04 /* Fontspring-DEMO-visbycf-demibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33DB2916842F001A8E04 /* Fontspring-DEMO-visbycf-demibold.otf */; };
+		CFCF33EC2916842F001A8E04 /* Fontspring-DEMO-visbycf-light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33DC2916842F001A8E04 /* Fontspring-DEMO-visbycf-light.otf */; };
+		CFCF33ED2916842F001A8E04 /* Fontspring-DEMO-visbycf-heavyoblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33DD2916842F001A8E04 /* Fontspring-DEMO-visbycf-heavyoblique.otf */; };
+		CFCF33EE2916842F001A8E04 /* Fontspring-DEMO-visbycf-medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33DE2916842F001A8E04 /* Fontspring-DEMO-visbycf-medium.otf */; };
+		CFCF33EF2916842F001A8E04 /* Fontspring-DEMO-visbycf-lightoblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33DF2916842F001A8E04 /* Fontspring-DEMO-visbycf-lightoblique.otf */; };
+		CFCF33F02916842F001A8E04 /* Fontspring-DEMO-visbycf-heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33E02916842F001A8E04 /* Fontspring-DEMO-visbycf-heavy.otf */; };
+		CFCF33F12916842F001A8E04 /* Fontspring-DEMO-visbycf-regularoblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33E12916842F001A8E04 /* Fontspring-DEMO-visbycf-regularoblique.otf */; };
+		CFCF33F22916842F001A8E04 /* Fontspring-DEMO-visbycf-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33E22916842F001A8E04 /* Fontspring-DEMO-visbycf-bold.otf */; };
+		CFCF33F32916842F001A8E04 /* Fontspring-DEMO-visbycf-thinoblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33E32916842F001A8E04 /* Fontspring-DEMO-visbycf-thinoblique.otf */; };
+		CFCF33F42916842F001A8E04 /* Fontspring-DEMO-visbycf-thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33E42916842F001A8E04 /* Fontspring-DEMO-visbycf-thin.otf */; };
+		CFCF33F52916842F001A8E04 /* Fontspring-DEMO-visbycf-mediumoblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33E52916842F001A8E04 /* Fontspring-DEMO-visbycf-mediumoblique.otf */; };
+		CFCF33F62916842F001A8E04 /* Fontspring-DEMO-visbycf-extraboldoblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33E62916842F001A8E04 /* Fontspring-DEMO-visbycf-extraboldoblique.otf */; };
+		CFCF33F72916842F001A8E04 /* Fontspring-DEMO-visbycf-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33E72916842F001A8E04 /* Fontspring-DEMO-visbycf-regular.otf */; };
+		CFCF33F82916842F001A8E04 /* Fontspring-DEMO-visbycf-boldoblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33E82916842F001A8E04 /* Fontspring-DEMO-visbycf-boldoblique.otf */; };
+		CFCF33F92916842F001A8E04 /* Fontspring-DEMO-visbycf-demiboldoblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33E92916842F001A8E04 /* Fontspring-DEMO-visbycf-demiboldoblique.otf */; };
+		CFCF33FA2916842F001A8E04 /* Fontspring-DEMO-visbycf-extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFCF33EA2916842F001A8E04 /* Fontspring-DEMO-visbycf-extrabold.otf */; };
+		CFCF33FC29168BEB001A8E04 /* AvatarRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF33FB29168BEB001A8E04 /* AvatarRecordView.swift */; };
+		CFCF33FE29168BF4001A8E04 /* StaticTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF33FD29168BF4001A8E04 /* StaticTextView.swift */; };
+		CFCF340029169735001A8E04 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF33FF29169735001A8E04 /* UILabel+Extensions.swift */; };
+		CFCF34022916A326001A8E04 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF34012916A326001A8E04 /* InfoView.swift */; };
+		CFCF34042916A365001A8E04 /* BottomStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF34032916A365001A8E04 /* BottomStaticView.swift */; };
+		CFCF34062916BE5E001A8E04 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCF34052916BE5E001A8E04 /* LaunchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,7 +99,29 @@
 		CFCD56B62912CFE1006BAE51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFCF33CE29159D73001A8E04 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CFCF33D02915B30C001A8E04 /* BigLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigLaunchView.swift; sourceTree = "<group>"; };
-		CFCF33D22915C79C001A8E04 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		CFCF33D22915C79C001A8E04 /* BorderedAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedAvatarView.swift; sourceTree = "<group>"; };
+		CFCF33DB2916842F001A8E04 /* Fontspring-DEMO-visbycf-demibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-demibold.otf"; sourceTree = "<group>"; };
+		CFCF33DC2916842F001A8E04 /* Fontspring-DEMO-visbycf-light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-light.otf"; sourceTree = "<group>"; };
+		CFCF33DD2916842F001A8E04 /* Fontspring-DEMO-visbycf-heavyoblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-heavyoblique.otf"; sourceTree = "<group>"; };
+		CFCF33DE2916842F001A8E04 /* Fontspring-DEMO-visbycf-medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-medium.otf"; sourceTree = "<group>"; };
+		CFCF33DF2916842F001A8E04 /* Fontspring-DEMO-visbycf-lightoblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-lightoblique.otf"; sourceTree = "<group>"; };
+		CFCF33E02916842F001A8E04 /* Fontspring-DEMO-visbycf-heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-heavy.otf"; sourceTree = "<group>"; };
+		CFCF33E12916842F001A8E04 /* Fontspring-DEMO-visbycf-regularoblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-regularoblique.otf"; sourceTree = "<group>"; };
+		CFCF33E22916842F001A8E04 /* Fontspring-DEMO-visbycf-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-bold.otf"; sourceTree = "<group>"; };
+		CFCF33E32916842F001A8E04 /* Fontspring-DEMO-visbycf-thinoblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-thinoblique.otf"; sourceTree = "<group>"; };
+		CFCF33E42916842F001A8E04 /* Fontspring-DEMO-visbycf-thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-thin.otf"; sourceTree = "<group>"; };
+		CFCF33E52916842F001A8E04 /* Fontspring-DEMO-visbycf-mediumoblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-mediumoblique.otf"; sourceTree = "<group>"; };
+		CFCF33E62916842F001A8E04 /* Fontspring-DEMO-visbycf-extraboldoblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-extraboldoblique.otf"; sourceTree = "<group>"; };
+		CFCF33E72916842F001A8E04 /* Fontspring-DEMO-visbycf-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-regular.otf"; sourceTree = "<group>"; };
+		CFCF33E82916842F001A8E04 /* Fontspring-DEMO-visbycf-boldoblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-boldoblique.otf"; sourceTree = "<group>"; };
+		CFCF33E92916842F001A8E04 /* Fontspring-DEMO-visbycf-demiboldoblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-demiboldoblique.otf"; sourceTree = "<group>"; };
+		CFCF33EA2916842F001A8E04 /* Fontspring-DEMO-visbycf-extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fontspring-DEMO-visbycf-extrabold.otf"; sourceTree = "<group>"; };
+		CFCF33FB29168BEB001A8E04 /* AvatarRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarRecordView.swift; sourceTree = "<group>"; };
+		CFCF33FD29168BF4001A8E04 /* StaticTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTextView.swift; sourceTree = "<group>"; };
+		CFCF33FF29169735001A8E04 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		CFCF34012916A326001A8E04 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		CFCF34032916A365001A8E04 /* BottomStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomStaticView.swift; sourceTree = "<group>"; };
+		CFCF34052916BE5E001A8E04 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				CF1946EE2914510000A83E6B /* LaunchCell.swift */,
+				CFCF34052916BE5E001A8E04 /* LaunchView.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -119,6 +164,7 @@
 			children = (
 				CF1CAB802912D72F0050A61F /* UICollectionViewCell+Extensions.swift */,
 				CF1CABB72912FC280050A61F /* UIView+Extensions.swift */,
+				CFCF33FF29169735001A8E04 /* UILabel+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -206,13 +252,19 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		CF1CABB42912F8440050A61F /* UIComponents */ = {
+		CF1CABB42912F8440050A61F /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				CF1CABB52912F85B0050A61F /* BadgeButton.swift */,
 				CF3B3F2329145F440092CA79 /* LaunchCollectionView.swift */,
+				CFCF33D22915C79C001A8E04 /* BorderedAvatarView.swift */,
+				CFCF33FB29168BEB001A8E04 /* AvatarRecordView.swift */,
+				CFCF33FD29168BF4001A8E04 /* StaticTextView.swift */,
+				CFCF34012916A326001A8E04 /* InfoView.swift */,
+				CFCF33D02915B30C001A8E04 /* BigLaunchView.swift */,
+				CFCF34032916A365001A8E04 /* BottomStaticView.swift */,
 			);
-			path = UIComponents;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		CF6CE4BA2912D5810097743C /* Supporting Files */ = {
@@ -238,6 +290,7 @@
 		CF6CE4BC2912D59C0097743C /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				CFCF33DA2916842F001A8E04 /* Demo_Fonts */,
 				CF1CAB9A2912E6600050A61F /* Lato */,
 				CFCD56B12912CFE1006BAE51 /* Assets.xcassets */,
 			);
@@ -265,7 +318,6 @@
 			children = (
 				CF1CAB7C2912D69C0050A61F /* Extensions */,
 				CF1CAB7B2912D6910050A61F /* Models */,
-				CF1CABB42912F8440050A61F /* UIComponents */,
 				CF1CAB7D2912D6A30050A61F /* Utils */,
 				CF1CAB7A2912D6860050A61F /* Services */,
 				CF6CE4BA2912D5810097743C /* Supporting Files */,
@@ -278,11 +330,41 @@
 		CFCF33CD29159D55001A8E04 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				CFCF33CE29159D73001A8E04 /* MainView.swift */,
-				CFCF33D02915B30C001A8E04 /* BigLaunchView.swift */,
-				CFCF33D22915C79C001A8E04 /* File.swift */,
+				CFCF33D4291678E4001A8E04 /* View */,
+				CF1CABB42912F8440050A61F /* Components */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		CFCF33D4291678E4001A8E04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFCF33CE29159D73001A8E04 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFCF33DA2916842F001A8E04 /* Demo_Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CFCF33DB2916842F001A8E04 /* Fontspring-DEMO-visbycf-demibold.otf */,
+				CFCF33DC2916842F001A8E04 /* Fontspring-DEMO-visbycf-light.otf */,
+				CFCF33DD2916842F001A8E04 /* Fontspring-DEMO-visbycf-heavyoblique.otf */,
+				CFCF33DE2916842F001A8E04 /* Fontspring-DEMO-visbycf-medium.otf */,
+				CFCF33DF2916842F001A8E04 /* Fontspring-DEMO-visbycf-lightoblique.otf */,
+				CFCF33E02916842F001A8E04 /* Fontspring-DEMO-visbycf-heavy.otf */,
+				CFCF33E12916842F001A8E04 /* Fontspring-DEMO-visbycf-regularoblique.otf */,
+				CFCF33E22916842F001A8E04 /* Fontspring-DEMO-visbycf-bold.otf */,
+				CFCF33E32916842F001A8E04 /* Fontspring-DEMO-visbycf-thinoblique.otf */,
+				CFCF33E42916842F001A8E04 /* Fontspring-DEMO-visbycf-thin.otf */,
+				CFCF33E52916842F001A8E04 /* Fontspring-DEMO-visbycf-mediumoblique.otf */,
+				CFCF33E62916842F001A8E04 /* Fontspring-DEMO-visbycf-extraboldoblique.otf */,
+				CFCF33E72916842F001A8E04 /* Fontspring-DEMO-visbycf-regular.otf */,
+				CFCF33E82916842F001A8E04 /* Fontspring-DEMO-visbycf-boldoblique.otf */,
+				CFCF33E92916842F001A8E04 /* Fontspring-DEMO-visbycf-demiboldoblique.otf */,
+				CFCF33EA2916842F001A8E04 /* Fontspring-DEMO-visbycf-extrabold.otf */,
+			);
+			path = Demo_Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,18 +425,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFCF33EB2916842F001A8E04 /* Fontspring-DEMO-visbycf-demibold.otf in Resources */,
 				CF1CABAA2912E6600050A61F /* Lato-Black.ttf in Resources */,
 				CFCD56B52912CFE1006BAE51 /* LaunchScreen.storyboard in Resources */,
+				CFCF33EF2916842F001A8E04 /* Fontspring-DEMO-visbycf-lightoblique.otf in Resources */,
+				CFCF33EC2916842F001A8E04 /* Fontspring-DEMO-visbycf-light.otf in Resources */,
 				CF1CABAF2912E6600050A61F /* Lato-Light.ttf in Resources */,
 				CF1CABA92912E6600050A61F /* Lato-Bold.ttf in Resources */,
+				CFCF33ED2916842F001A8E04 /* Fontspring-DEMO-visbycf-heavyoblique.otf in Resources */,
 				CF1CABAE2912E6600050A61F /* Lato-BoldItalic.ttf in Resources */,
+				CFCF33F12916842F001A8E04 /* Fontspring-DEMO-visbycf-regularoblique.otf in Resources */,
 				CF1CABAB2912E6600050A61F /* Lato-Regular.ttf in Resources */,
+				CFCF33F82916842F001A8E04 /* Fontspring-DEMO-visbycf-boldoblique.otf in Resources */,
+				CFCF33F42916842F001A8E04 /* Fontspring-DEMO-visbycf-thin.otf in Resources */,
+				CFCF33F72916842F001A8E04 /* Fontspring-DEMO-visbycf-regular.otf in Resources */,
 				CF1CABA62912E6600050A61F /* Lato-Italic.ttf in Resources */,
+				CFCF33F52916842F001A8E04 /* Fontspring-DEMO-visbycf-mediumoblique.otf in Resources */,
 				CF1CABAC2912E6600050A61F /* Lato-BlackItalic.ttf in Resources */,
+				CFCF33F22916842F001A8E04 /* Fontspring-DEMO-visbycf-bold.otf in Resources */,
+				CFCF33EE2916842F001A8E04 /* Fontspring-DEMO-visbycf-medium.otf in Resources */,
+				CFCF33F92916842F001A8E04 /* Fontspring-DEMO-visbycf-demiboldoblique.otf in Resources */,
 				CF1CABA82912E6600050A61F /* Lato-Thin.ttf in Resources */,
+				CFCF33F32916842F001A8E04 /* Fontspring-DEMO-visbycf-thinoblique.otf in Resources */,
 				CFCD56B22912CFE1006BAE51 /* Assets.xcassets in Resources */,
+				CFCF33F62916842F001A8E04 /* Fontspring-DEMO-visbycf-extraboldoblique.otf in Resources */,
 				CF1CABB02912E6600050A61F /* Lato-ThinItalic.ttf in Resources */,
+				CFCF33FA2916842F001A8E04 /* Fontspring-DEMO-visbycf-extrabold.otf in Resources */,
 				CF1CABA72912E6600050A61F /* Lato-LightItalic.ttf in Resources */,
+				CFCF33F02916842F001A8E04 /* Fontspring-DEMO-visbycf-heavy.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,14 +475,20 @@
 				CF1CAB902912D9830050A61F /* MainViewModel.swift in Sources */,
 				CF1CAB812912D72F0050A61F /* UICollectionViewCell+Extensions.swift in Sources */,
 				CF1CAB872912D8180050A61F /* Coordinator.swift in Sources */,
+				CFCF340029169735001A8E04 /* UILabel+Extensions.swift in Sources */,
 				CF1CAB8D2912D8AF0050A61F /* MainCoordinator.swift in Sources */,
 				CF1CAB992912DA5C0050A61F /* NetError.swift in Sources */,
+				CFCF34042916A365001A8E04 /* BottomStaticView.swift in Sources */,
+				CFCF33FC29168BEB001A8E04 /* AvatarRecordView.swift in Sources */,
 				CF1CAB892912D8490050A61F /* BaseCoordinator.swift in Sources */,
+				CFCF33FE29168BF4001A8E04 /* StaticTextView.swift in Sources */,
 				CF1CABB22912E7860050A61F /* Constants.swift in Sources */,
-				CFCF33D32915C79C001A8E04 /* File.swift in Sources */,
+				CFCF33D32915C79C001A8E04 /* BorderedAvatarView.swift in Sources */,
 				CF1CAB962912DA2E0050A61F /* NetworkService.swift in Sources */,
 				CF1946EF2914510000A83E6B /* LaunchCell.swift in Sources */,
 				CFCF33D12915B30C001A8E04 /* BigLaunchView.swift in Sources */,
+				CFCF34022916A326001A8E04 /* InfoView.swift in Sources */,
+				CFCF34062916BE5E001A8E04 /* LaunchView.swift in Sources */,
 				CF1CAB942912D9C30050A61F /* DetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

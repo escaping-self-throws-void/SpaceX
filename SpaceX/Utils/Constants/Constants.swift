@@ -11,6 +11,10 @@ enum C {
     enum Fonts {
         static let latoBold = "Lato-Bold"
         static let latoRegular = "Lato-Regular"
+        static let latoExtraBold = "Lato-Black"
+        
+        static let visbyBold = "FONTSPRINGDEMO-VisbyCFDemiBoldRegular"
+        static let visbyExtraBold = "FONTSPRINGDEMO-VisbyCFBoldRegular"
     }
     
     enum Images {

@@ -13,6 +13,6 @@ extension UICollectionViewCell {
     }
     
     static var reuseIdentifier: String {
-        return String(describing: Self.self)
+        String(describing: Self.self)
     }
 }

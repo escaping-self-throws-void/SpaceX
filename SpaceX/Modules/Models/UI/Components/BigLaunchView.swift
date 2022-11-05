@@ -23,6 +23,7 @@ final class BigLaunchView: UIView {
         button.setTitle("G O L D", for: .normal)
         button.titleLabel?.font = UIFont(name: C.Fonts.latoBold, size: 9)
         button.layer.cornerRadius = 10
+            button.place(on: buttonContainer)
         return button
     }()
     
@@ -31,17 +32,21 @@ final class BigLaunchView: UIView {
         button.setTitle("S P A C E  S H I P S", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont(name: C.Fonts.latoBold, size: 9)
+        button.place(on: buttonContainer)
         return button
     }()
     
     private lazy var bottomPhoto: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: C.Images.bottom)
-        imageView.addoverlay(alpha: 0.4)
+        imageView.contentMode = .scaleAspectFill
+        imageView.addoverlay(alpha: 0.5)
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 8
         return imageView
     }()
+    
+    private lazy var buttonContainer = UIView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,20 +58,23 @@ final class BigLaunchView: UIView {
     }
     
     private func commonInit() {
-        let spacer = UIView()
-        let buttonsStack = UIStackView(arrangedSubviews: [firstBttn, secondBttn, spacer])
-        buttonsStack.spacing = 5
-        buttonsStack.distribution = .fill
-        buttonsStack.alignment = .leading
+        firstBttn.pin(
+            .leading,
+            .top,
+            .bottom,
+            .fixedWidth(56)
+        )
+
+        secondBttn.pin(
+            .leading(padding: 65),
+            .top,
+            .bottom
+        )
         
-        buttonsStack.pin(.fixedHeight(20))
+        bigTitle.pin(.fixedHeight(30))
+        buttonContainer.pin(.fixedHeight(20))
         
-        firstBttn.pin(.fixedWidth(56))
-        secondBttn.pin(.fixedWidth(80))
-    
-        bottomPhoto.pin(.fixedHeight(213))
-        
-        let finalStack = UIStackView(arrangedSubviews: [bigTitle, buttonsStack, bottomPhoto])
+        let finalStack = UIStackView(arrangedSubviews: [bigTitle, buttonContainer, bottomPhoto])
         finalStack.axis = .vertical
         finalStack.spacing = 15
         finalStack.distribution = .fillProportionally
