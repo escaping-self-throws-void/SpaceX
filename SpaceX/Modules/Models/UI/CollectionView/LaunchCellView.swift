@@ -7,46 +7,44 @@
 
 import UIKit
 
-final class LaunchView: UIView {
+final class LaunchCellView: UIView {
     
-    private lazy var recordLabel: UILabel = {
+    lazy var recordLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: C.Fonts.visbyExtraBold, size: 18)
-        label.text = "34787"
         label.textColor = .white
-//        label.place(on: self)
         return label
     }()
     
-    private lazy var dateLabel: UILabel = {
+    lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: C.Fonts.visbyBold, size: 12)
-        label.text = "25 Feb 2022, 11:25 GMT 5"
         label.textColor = .white
-//        label.place(on: self)
+        label.allowsDefaultTighteningForTruncation = true
         return label
     }()
     
-    private lazy var descriptionLabel: UILabel = {
+    lazy var flightNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: C.Fonts.latoBold, size: 13)
-        label.text = "Columbia launching"
         label.textColor = .white
         label.numberOfLines = 0
-//        label.place(on: self)
+        label.place(on: self)
         return label
     }()
     
     private lazy var whiteLine: UIView = {
         let view = UIView()
-        view.frame = .init(x: 0, y: 0, width: .zero, height: 2)
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 2
+        view.place(on: self)
         return view
     }()
     
     private lazy var goldenLine: UIView = {
         let view = UIView()
-        view.frame = .init(x: 0, y: 0, width: whiteLine.frame.width/2, height: 2)
         view.backgroundColor = UIColor(named: C.Colors.goldenAccent)
+        view.layer.cornerRadius = 2
         view.place(on: whiteLine)
         return view
     }()
@@ -57,23 +55,36 @@ final class LaunchView: UIView {
     }
     
     private func commonInit() {
+        
         let topStack = UIStackView(arrangedSubviews: [recordLabel, dateLabel])
         topStack.axis = .vertical
         
+        let inset: CGFloat = 5
+        
         topStack.place(on: self).pin(
             .top,
-            .leading,
-            .trailing
+            .leading(padding: inset),
+            .trailing(padding: inset)
         )
         
-        let bottomStack = UIStackView(arrangedSubviews: [descriptionLabel, whiteLine])
-        topStack.axis = .vertical
+        flightNameLabel.pin(
+            .bottom(to: whiteLine, padding: 25),
+            .leading(padding: inset),
+            .trailing(padding: inset)
+        )
         
-        topStack.place(on: self).pin(
-            .bottom,
+        whiteLine.pin(
+            .fixedHeight(4),
             .leading,
-            .trailing
+            .trailing,
+            .bottom
+        )
+        
+        goldenLine.pin(
+            .leading,
+            .trailing(to: whiteLine, .centerX),
+            .top,
+            .bottom
         )
     }
-    
 }

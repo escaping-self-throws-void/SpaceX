@@ -10,7 +10,7 @@ import UIKit
 final class MainCoordinator: BaseCoordinator {
         
     override func start() {
-        let viewModel = MainViewModel(self)
+        let viewModel = MainViewModel(self, service: ApiService())
         let viewController = MainController(viewModel)
         navigationController.setViewControllers([viewController], animated: false)
     }

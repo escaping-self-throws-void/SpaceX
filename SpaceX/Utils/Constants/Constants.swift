@@ -22,10 +22,12 @@ enum C {
         static let search = "searchIcon"
         static let bottom = "bottomImage"
         static let avatar = "avatarImage"
+        static let cellPlaceholder = "cellPlaceholder"
     }
     
     enum Colors {
         static let goldenAccent = "goldenAccent"
+        static let skyBlue = "skyBlue"
     }
     
     

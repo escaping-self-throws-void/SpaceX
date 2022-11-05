@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NetError: Error {
+enum RequestError: Error {
     case invalidURL
     case invalidResponse
     case invalidStatusCode(Int)
@@ -16,7 +16,7 @@ enum NetError: Error {
     case unknown
 }
 
-extension NetError: CustomStringConvertible {
+extension RequestError: CustomStringConvertible {
     var description: String {
         switch self {
         case .invalidURL:

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 final class MainController: UIViewController {
     
@@ -13,25 +14,24 @@ final class MainController: UIViewController {
     
     private let mainView = MainView()
     
+    private var cancellables = Set<AnyCancellable>()
+    
+    private lazy var dataSource = configureDataSource()
+    
     override func loadView() {
         view = mainView
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         setupNavBar()
-        addCollection()
+        bindViewModel()
     }
 
     init(_ viewModel: MainViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        commonInit()
     }
     
     required init?(coder: NSCoder) {
@@ -39,10 +39,16 @@ final class MainController: UIViewController {
     }
 }
 
+// MARK: - Private methods
+
 extension MainController {
     
+    private func commonInit() {
+        view.backgroundColor = .white
+        mainView.collectionView.delegate = self
+    }
+    
     private func setupNavBar() {
-        
         let titleLabel = UILabel()
         titleLabel.text = "Launches"
         titleLabel.font = UIFont(name: C.Fonts.latoBold, size: 25)
@@ -77,24 +83,56 @@ extension MainController {
         navigationItem.rightBarButtonItems = [rightSpacer, rightStackView]
     }
     
+    private func bindViewModel() {
+        viewModel.refresh
+            .receive(on: RunLoop.main)
+            .sink { [weak self] _ in
+                self?.setData(animated: true)
+            }
+            .store(in: &cancellables)
+    }
 }
 
-// MARK: - CollectionView Delegate and Data Source
+// MARK: - CollectionView Delegate
 
-extension MainController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    private func addCollection() {
-        mainView.collectionView.delegate = self
-        mainView.collectionView.dataSource = self
+extension MainController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        .init(width: mainView.collectionView.frame.width / 2.1, height: mainView.collectionView.frame.height * 0.9)
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let launch = dataSource.itemIdentifier(for: indexPath) else { return }
+        print(launch.rocket)
+    }
+}
+
+// MARK: - Diffable Data Source Setup
+
+extension MainController {
+    
+    fileprivate typealias LaunchDataSource = UICollectionViewDiffableDataSource<Section, LaunchModel>
+    fileprivate typealias LaunchSnapshot = NSDiffableDataSourceSnapshot<Section, LaunchModel>
+
+    fileprivate enum Section {
+        case main
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchCell.reuseIdentifier, for: indexPath) as? LaunchCell ?? LaunchCell()
-        cell.backgroundColor = .blue
-        return cell
+    private func configureDataSource() -> LaunchDataSource {
+        let cellRegistration = UICollectionView.CellRegistration<LaunchCell, LaunchModel> { cell, _, model in
+            cell.configure(with: model)
+        }
+        
+        return LaunchDataSource(collectionView: mainView.collectionView) { collectionView, indexPath, itemIdentifier in
+            collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
+        }
+    }
+    
+    private func setData(animated: Bool) {
+        var snapshot = LaunchSnapshot()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(viewModel.launches)
+        
+        dataSource.apply(snapshot, animatingDifferences: animated)
     }
 }

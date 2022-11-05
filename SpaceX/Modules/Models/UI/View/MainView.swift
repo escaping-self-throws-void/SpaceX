@@ -11,7 +11,6 @@ final class MainView: UIView {
     
     lazy var collectionView: LaunchCollectionView = {
         let collectionView = LaunchCollectionView()
-        collectionView.backgroundColor = .red
         collectionView.place(on: self)
         return collectionView
     }()

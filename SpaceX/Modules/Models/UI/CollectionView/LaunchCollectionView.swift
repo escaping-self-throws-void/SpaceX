@@ -12,8 +12,6 @@ final class LaunchCollectionView: UICollectionView {
     private let launchLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0)
-//        layout.itemSize = CGSize(width: 191, height: 201)
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 15
         return layout
@@ -32,6 +30,5 @@ final class LaunchCollectionView: UICollectionView {
     private func setup() {
         showsHorizontalScrollIndicator = false
         showsVerticalScrollIndicator = false
-        register(LaunchCell.self, forCellWithReuseIdentifier: LaunchCell.reuseIdentifier)
     }
 }
