@@ -31,6 +31,6 @@ final class GradientImageView: UIImageView {
         gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
         gradientLayer.locations = [0.0, 1.0]
 
-        layer.addSublayer(gradientLayer)
+        layer.insertSublayer(gradientLayer, at: 0)
     }
 }

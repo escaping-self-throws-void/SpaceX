@@ -16,8 +16,7 @@ protocol DetailsViewModelProtocol {
 }
 
 final class DetailsViewModel: DetailsViewModelProtocol {
-    var update = PassthroughSubject<Bool, Never>()
-    
+    private(set) var update = PassthroughSubject<Bool, Never>()
     private(set) var rocketModel: RocketModel?
     
     private let coordinator: MainCoordinator

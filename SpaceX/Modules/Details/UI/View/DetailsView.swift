@@ -26,15 +26,9 @@ final class DetailsView: UIView {
         return button
     }()
     
-    lazy var bottomView: BottomView = {
-        let view = BottomView()
-        return view
-    }()
+    lazy var bottomView = BottomView()
     
-    lazy var indicatorLine: IndicatorLine = {
-        let view = IndicatorLine()
-        return view
-    }()
+    lazy var indicatorLine = IndicatorLine()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

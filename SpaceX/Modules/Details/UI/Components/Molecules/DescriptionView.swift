@@ -12,7 +12,6 @@ final class DescriptionView: UIView {
     lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: C.Fonts.latoRegular, size: 17)
-        label.textColor = .black
         return label
     }()
     
@@ -22,9 +21,6 @@ final class DescriptionView: UIView {
         label.font = UIFont(name: C.Fonts.latoRegular, size: 16)
         label.isSelectable = false
         label.isEditable = false
-//        label.numberOfLines = 0
-//        label.adjustsFontSizeToFitWidth = true
-//        label.minimumScaleFactor = 0.3
         label.textAlignment = .left
         return label
     }()

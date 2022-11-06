@@ -12,7 +12,6 @@ final class TopInfoView: UIView {
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: C.Fonts.latoBold, size: 20)
-        label.textColor = .black
         label.textAlignment = .left
         label.place(on: self)
         return label

@@ -203,8 +203,8 @@
 			children = (
 				CFCF33CD29159D55001A8E04 /* UI */,
 				CF1946EC291450B500A83E6B /* Cell */,
-				CFDC702F291712F00096B749 /* MainUIModel.swift */,
 				CF1CAB8C2912D8AF0050A61F /* MainCoordinator.swift */,
+				CFDC702F291712F00096B749 /* MainUIModel.swift */,
 				CF1CAB8F2912D9830050A61F /* MainViewModel.swift */,
 				CFCD56AC2912CFD9006BAE51 /* MainViewController.swift */,
 			);
@@ -328,10 +328,10 @@
 			children = (
 				CF6CE4BA2912D5810097743C /* Supporting Files */,
 				CF1CAB7C2912D69C0050A61F /* Extensions */,
-				CFDC70172916D4DA0096B749 /* Models */,
-				CF1CAB7D2912D6A30050A61F /* Utils */,
-				CF1CAB7A2912D6860050A61F /* Services */,
 				CF6CE4BB2912D5950097743C /* Modules */,
+				CF1CAB7D2912D6A30050A61F /* Utils */,
+				CFDC70172916D4DA0096B749 /* Models */,
+				CF1CAB7A2912D6860050A61F /* Services */,
 				CF6CE4BC2912D59C0097743C /* Resourses */,
 			);
 			path = SpaceX;

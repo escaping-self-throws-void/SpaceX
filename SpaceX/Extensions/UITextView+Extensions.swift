@@ -8,7 +8,6 @@
 import UIKit
 
 extension UITextView {
-    
     func setLineHeight(_ lineHeight: CGFloat) {
         guard let text, let font, let textColor else { return }
         

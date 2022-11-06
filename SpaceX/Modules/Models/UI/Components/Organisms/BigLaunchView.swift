@@ -13,7 +13,6 @@ final class BigLaunchView: UIView {
         let label = UILabel()
         label.font = UIFont(name: C.Fonts.latoBold, size: 25)
         label.text = C.Text.big
-        label.textColor = .black
         return label
     }()
     

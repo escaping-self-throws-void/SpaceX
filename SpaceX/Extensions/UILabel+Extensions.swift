@@ -8,7 +8,6 @@
 import UIKit
 
 extension UILabel {
-    
     func setLineHeight(_ lineHeight: CGFloat) {
         guard let text else { return }
         

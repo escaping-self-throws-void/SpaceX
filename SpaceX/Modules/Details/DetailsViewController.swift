@@ -40,7 +40,6 @@ final class DetailsViewController: UIViewController {
     // MARK: - Private methods
 
 extension DetailsViewController {
-    
     private func commonInit() {
         detailsView.closeButton.addTarget(self, action: #selector(close), for: .touchUpInside)
         detailsView.bottomView.buttonsView.readMoreButton.addTarget(self, action: #selector(readMore), for: .touchUpInside)
@@ -67,7 +66,11 @@ extension DetailsViewController {
             detailsView.indicatorLine.isHidden = !model.upcoming
         }
     }
-    
+}
+
+// MARK: - Button Actions
+
+extension DetailsViewController {
     @objc private func close() {
         dismiss(animated: true)
     }

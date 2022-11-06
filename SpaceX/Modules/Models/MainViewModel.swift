@@ -17,8 +17,7 @@ protocol MainViewModelProtocol {
 }
 
 final class MainViewModel: MainViewModelProtocol {
-    var refresh = PassthroughSubject<Bool, Never>()
-
+    private(set) var refresh = PassthroughSubject<Bool, Never>()
     private(set) var launches = [LaunchModel]()
     
     private let coordinator: MainCoordinator
