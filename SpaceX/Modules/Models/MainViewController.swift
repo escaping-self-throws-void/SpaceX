@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-final class MainController: UIViewController {
+final class MainViewController: UIViewController {
     
     private let viewModel: MainViewModelProtocol
     
@@ -42,7 +42,7 @@ final class MainController: UIViewController {
 
 // MARK: - Private methods
 
-extension MainController {
+extension MainViewController {
     
     private func commonInit() {
         mainView.collectionView.delegate = self
@@ -95,17 +95,17 @@ extension MainController {
 
 // MARK: - CollectionView Delegate
 
-extension MainController: UICollectionViewDelegate {
+extension MainViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let launch = dataSource.itemIdentifier(for: indexPath) else { return }
-        print(launch.rocket)
+        viewModel.goToDetails(id: launch.rocket)
     }
 }
 
 // MARK: - Diffable Data Source Setup
 
-extension MainController {
+extension MainViewController {
     
     fileprivate typealias LaunchDataSource = UICollectionViewDiffableDataSource<Section, LaunchModel>
     fileprivate typealias LaunchSnapshot = NSDiffableDataSourceSnapshot<Section, LaunchModel>

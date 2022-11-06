@@ -7,23 +7,37 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+final class DetailsViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    private let viewModel: DetailsViewModelProtocol
+    
+    private let detailsView = DetailsView()
+    
+    override func loadView() {
+        view = detailsView
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
     }
-    */
 
+    init(_ viewModel: DetailsViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        commonInit()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func commonInit() {
+        detailsView.closeButton.addTarget(self, action: #selector(close), for: .touchUpInside)
+    }
+    
+    @objc private func close() {
+        dismiss(animated: true)
+    }
 }

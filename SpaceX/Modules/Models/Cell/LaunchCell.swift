@@ -19,19 +19,6 @@ final class LaunchCell: UICollectionViewCell {
         return imageView
     }()
     
-    
-//    override class func awakeFromNib() {
-//        super.awakeFromNib()
-//    }
-//
-//    override init(frame: CGRect) {
-//        super.init(frame: .zero)
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         commonInit()

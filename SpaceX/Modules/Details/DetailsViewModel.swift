@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+protocol DetailsViewModelProtocol {
+
+}
+
+final class DetailsViewModel: DetailsViewModelProtocol {
+    
+    private let coordinator: MainCoordinator
+    private var service: ApiServiceProtocol
+        
+    init(_ coordinator: MainCoordinator, service: ApiServiceProtocol) {
+        self.coordinator = coordinator
+        self.service = service
+    }
+}

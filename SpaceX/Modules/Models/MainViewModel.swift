@@ -13,6 +13,7 @@ protocol MainViewModelProtocol {
     var refresh: PassthroughSubject<Bool, Never> { get }
     
     func getLaunches()
+    func goToDetails(id: String)
 }
 
 final class MainViewModel: MainViewModelProtocol {
@@ -38,6 +39,10 @@ final class MainViewModel: MainViewModelProtocol {
                 debugPrint(error)
             }
         }
+    }
+    
+    func goToDetails(id: String) {
+        coordinator.openDetailsScreen(id: id)
     }
     
     private func mapModels(_ data: [Launch]) {

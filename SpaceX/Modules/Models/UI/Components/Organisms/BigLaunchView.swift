@@ -17,17 +17,17 @@ final class BigLaunchView: UIView {
         return label
     }()
     
-    private lazy var firstBttn: UIButton = {
+    private lazy var firstButton: UIButton = {
         let button = UIButton(type: .custom)
         button.backgroundColor = UIColor(named: C.Colors.goldenAccent)
         button.setTitle(C.Text.gold, for: .normal)
         button.titleLabel?.font = UIFont(name: C.Fonts.latoBold, size: 9)
         button.layer.cornerRadius = 10
-            button.place(on: buttonContainer)
+        button.place(on: buttonContainer)
         return button
     }()
     
-    private lazy var secondBttn: UIButton = {
+    private lazy var secondButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitle(C.Text.space, for: .normal)
         button.setTitleColor(.black, for: .normal)
@@ -36,11 +36,12 @@ final class BigLaunchView: UIView {
         return button
     }()
     
-    private lazy var bottomPhoto: UIImageView = {
-        let imageView = UIImageView()
+    private lazy var bottomPhoto: GradientImageView = {
+        let imageView = GradientImageView()
+        imageView.addGradient(top: .init(named: C.Colors.gradientTop),
+                              bottom: .init(named: C.Colors.gradientBottom))
         imageView.image = UIImage(named: C.Images.bottom)
         imageView.contentMode = .scaleAspectFill
-        imageView.addoverlay(alpha: 0.5)
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 8
         return imageView
@@ -58,14 +59,14 @@ final class BigLaunchView: UIView {
     }
     
     private func commonInit() {
-        firstBttn.pin(
+        firstButton.pin(
             .leading,
             .top,
             .bottom,
             .fixedWidth(56)
         )
 
-        secondBttn.pin(
+        secondButton.pin(
             .leading(padding: 65),
             .top,
             .bottom

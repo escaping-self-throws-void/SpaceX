@@ -36,8 +36,6 @@ extension HTTPClient {
             throw RequestError.invalidStatusCode(response.statusCode)
         }
         
-        print(response.statusCode)
-
         guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else {
             throw RequestError.unableToDecode
         }

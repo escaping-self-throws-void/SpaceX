@@ -20,11 +20,15 @@ enum C {
         static let bottom = "bottomImage"
         static let avatar = "avatarImage"
         static let cellPlaceholder = "cellPlaceholder"
+        static let closeButton = "closeButton"
     }
     
     enum Colors {
         static let goldenAccent = "goldenAccent"
         static let skyBlue = "skyBlue"
+        static let gradientTop = "gradientTop"
+        static let gradientBottom = "gradientBottom"
+        static let silverGrey = "silverGrey"
     }
     
     enum Text {
@@ -37,5 +41,7 @@ enum C {
         static let gold = "G O L D"
         static let space = "S P A C E  S H I P S"
         static let title = "Launches"
+        static let read = "Read More"
+        static let share = "Share"
     }
 }
