@@ -37,13 +37,28 @@ extension ApiEndpoint: Endpoint {
     var header: [String : String]? {
         return nil
     }
-    
-    var body: [String : String]? {
+
+    var body: [String : Any]? {
         switch self {
         case .successful:
-            return [:]
+            return getQueryBody()
         default:
             return nil
         }
+    }
+    
+    private func getQueryBody() -> [String : Any] {
+        let today = Date()
+        let calendar = Calendar.current
+        var component = DateComponents()
+        component.year = -3
+        let threeYearsAgo = calendar.date(byAdding: component, to: Date())
+        
+        let date = ["$gte": threeYearsAgo?.toUTC, "$lte": today.toUTC]
+        let query: [String : Any] = ["date_utc": date, "success": true]
+        let sort = ["date_utc": "-1"]
+        let options: [String : Any] = ["sort": sort, "limit": 103]
+        
+        return ["query": query, "options": options]
     }
 }

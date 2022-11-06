@@ -20,7 +20,8 @@ extension HTTPClient {
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method.rawValue
         request.allHTTPHeaderFields = endpoint.header
-        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
         if let body = endpoint.body {
             request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
         }
@@ -34,6 +35,8 @@ extension HTTPClient {
         guard (200..<300) ~= response.statusCode else {
             throw RequestError.invalidStatusCode(response.statusCode)
         }
+        
+        print(response.statusCode)
 
         guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else {
             throw RequestError.unableToDecode

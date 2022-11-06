@@ -9,6 +9,7 @@ import Foundation
 
 struct Container: Decodable {
     let docs: [Launch]
+    let limit: Int
 }
 
 struct Launch: Decodable {
