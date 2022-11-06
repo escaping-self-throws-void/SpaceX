@@ -11,16 +11,16 @@ final class LaunchCellView: UIView {
     
     lazy var recordLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: C.Fonts.visbyExtraBold, size: 18)
+        label.font = UIFont(name: C.Fonts.latoExtraBold, size: 18)
         label.textColor = .white
         return label
     }()
     
     lazy var dateLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: C.Fonts.visbyBold, size: 12)
+        label.font = UIFont(name: C.Fonts.latoRegular, size: 12)
         label.textColor = .white
-        label.allowsDefaultTighteningForTruncation = true
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
@@ -33,19 +33,9 @@ final class LaunchCellView: UIView {
         return label
     }()
     
-    private lazy var whiteLine: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.layer.cornerRadius = 2
+    lazy var indicatorLine: IndicatorLine = {
+        let view = IndicatorLine()
         view.place(on: self)
-        return view
-    }()
-    
-    private lazy var goldenLine: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(named: C.Colors.goldenAccent)
-        view.layer.cornerRadius = 2
-        view.place(on: whiteLine)
         return view
     }()
     
@@ -55,35 +45,30 @@ final class LaunchCellView: UIView {
     }
     
     private func commonInit() {
-        
         let topStack = UIStackView(arrangedSubviews: [recordLabel, dateLabel])
         topStack.axis = .vertical
+        topStack.alignment = .fill
+        topStack.distribution = .fillProportionally
         
         let inset: CGFloat = 5
         
         topStack.place(on: self).pin(
             .top,
             .leading(padding: inset),
-            .trailing(padding: inset)
+            .trailing(padding: inset),
+            .fixedHeight(50)
         )
         
         flightNameLabel.pin(
-            .bottom(to: whiteLine, padding: 25),
+            .bottom(to: indicatorLine, padding: 25),
             .leading(padding: inset),
             .trailing(padding: inset)
         )
         
-        whiteLine.pin(
+        indicatorLine.pin(
             .fixedHeight(4),
             .leading,
             .trailing,
-            .bottom
-        )
-        
-        goldenLine.pin(
-            .leading,
-            .trailing(to: whiteLine, .centerX),
-            .top,
             .bottom
         )
     }

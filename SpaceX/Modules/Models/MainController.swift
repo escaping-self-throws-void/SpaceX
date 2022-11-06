@@ -26,6 +26,7 @@ final class MainController: UIViewController {
         super.viewDidLoad()
         setupNavBar()
         bindViewModel()
+        viewModel.getLaunches()
     }
 
     init(_ viewModel: MainViewModelProtocol) {
@@ -44,13 +45,12 @@ final class MainController: UIViewController {
 extension MainController {
     
     private func commonInit() {
-        view.backgroundColor = .white
         mainView.collectionView.delegate = self
     }
     
     private func setupNavBar() {
         let titleLabel = UILabel()
-        titleLabel.text = "Launches"
+        titleLabel.text = C.Text.title
         titleLabel.font = UIFont(name: C.Fonts.latoBold, size: 25)
 
         let leftSpacer = UIBarButtonItem(customView:
@@ -95,11 +95,7 @@ extension MainController {
 
 // MARK: - CollectionView Delegate
 
-extension MainController: UICollectionViewDelegateFlowLayout {
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        .init(width: mainView.collectionView.frame.width / 2.1, height: mainView.collectionView.frame.height * 0.9)
-    }
+extension MainController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let launch = dataSource.itemIdentifier(for: indexPath) else { return }

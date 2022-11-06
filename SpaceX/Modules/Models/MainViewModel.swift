@@ -11,6 +11,8 @@ import Combine
 protocol MainViewModelProtocol {
     var launches: [LaunchModel] { get }
     var refresh: PassthroughSubject<Bool, Never> { get }
+    
+    func getLaunches()
 }
 
 final class MainViewModel: MainViewModelProtocol {
@@ -24,10 +26,9 @@ final class MainViewModel: MainViewModelProtocol {
     init(_ coordinator: MainCoordinator, service: ApiServiceProtocol) {
         self.coordinator = coordinator
         self.service = service
-        getLaunches()
     }
     
-    private func getLaunches() {
+    func getLaunches() {
         Task {
             do {
                 let fetchedData = try await service.fetchLaunches()

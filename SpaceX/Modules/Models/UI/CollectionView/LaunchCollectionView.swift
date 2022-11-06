@@ -17,18 +17,23 @@ final class LaunchCollectionView: UICollectionView {
         return layout
     }()
     
-    
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: launchLayout)
-        setup()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setup() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        commonInit()
+    }
+
+    private func commonInit() {
         showsHorizontalScrollIndicator = false
         showsVerticalScrollIndicator = false
+        launchLayout.itemSize = .init(width: bounds.width / 2.1,
+                                      height: bounds.height * 0.9)
     }
 }

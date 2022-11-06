@@ -12,7 +12,7 @@ final class StaticTextView: UIView {
     private lazy var firstLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: C.Fonts.latoRegular, size: 10)
-        label.text = "by Eng. Dieter Rams"
+        label.text = C.Text.by
         label.textColor = .white
         label.textAlignment = .left
         return label
@@ -21,7 +21,7 @@ final class StaticTextView: UIView {
     private lazy var secondLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: C.Fonts.latoBold, size: 16)
-        label.text = "ISS geosynchronous and \nis it stationary"
+        label.text = C.Text.iss
         label.numberOfLines = 0
         label.textColor = .white
         label.textAlignment = .left
@@ -32,7 +32,7 @@ final class StaticTextView: UIView {
         let label = UILabel()
         label.textColor = .white
         label.font = UIFont(name: C.Fonts.latoRegular, size: 10)
-        label.text = "Lorem ipsum dolor sit amet, consectetur\n adipiscing elit. Pellentesque eros enim, dictum\n vitae quam nec, congue feugiat neque. Vivamus\n ut luctus enim. Lorem ipsum dolor sit amet,\n consectetur adipiscing elit. Pellentesque eros\n enim, dictum vitae quam nec, congue feugiat\n neque. Vivamus ut luctus enim."
+        label.text = C.Text.lorem
         label.numberOfLines = 0
         label.textAlignment = .left
         label.setLineHeight(5)

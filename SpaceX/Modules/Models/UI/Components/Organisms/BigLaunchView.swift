@@ -12,7 +12,7 @@ final class BigLaunchView: UIView {
     private lazy var bigTitle: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: C.Fonts.latoBold, size: 25)
-        label.text = "The Big Launch"
+        label.text = C.Text.big
         label.textColor = .black
         return label
     }()
@@ -20,7 +20,7 @@ final class BigLaunchView: UIView {
     private lazy var firstBttn: UIButton = {
         let button = UIButton(type: .custom)
         button.backgroundColor = UIColor(named: C.Colors.goldenAccent)
-        button.setTitle("G O L D", for: .normal)
+        button.setTitle(C.Text.gold, for: .normal)
         button.titleLabel?.font = UIFont(name: C.Fonts.latoBold, size: 9)
         button.layer.cornerRadius = 10
             button.place(on: buttonContainer)
@@ -29,7 +29,7 @@ final class BigLaunchView: UIView {
     
     private lazy var secondBttn: UIButton = {
         let button = UIButton(type: .custom)
-        button.setTitle("S P A C E  S H I P S", for: .normal)
+        button.setTitle(C.Text.space, for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont(name: C.Fonts.latoBold, size: 9)
         button.place(on: buttonContainer)

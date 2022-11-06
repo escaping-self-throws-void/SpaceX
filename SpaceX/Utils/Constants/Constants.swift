@@ -12,9 +12,6 @@ enum C {
         static let latoBold = "Lato-Bold"
         static let latoRegular = "Lato-Regular"
         static let latoExtraBold = "Lato-Black"
-        
-        static let visbyBold = "FONTSPRINGDEMO-VisbyCFDemiBoldRegular"
-        static let visbyExtraBold = "FONTSPRINGDEMO-VisbyCFBoldRegular"
     }
     
     enum Images {
@@ -30,7 +27,15 @@ enum C {
         static let skyBlue = "skyBlue"
     }
     
-    
-    
-    
+    enum Text {
+        static let record = "2355"
+        static let date = "24 Feb 2022 \n11:25 GMT 5"
+        static let by = "by Eng. Dieter Rams"
+        static let iss = "ISS geosynchronous and \nis it stationary"
+        static let lorem = "Lorem ipsum dolor sit amet, consectetur\n adipiscing elit. Pellentesque eros enim, dictum\n vitae quam nec, congue feugiat neque. Vivamus\n ut luctus enim. Lorem ipsum dolor sit amet,\n consectetur adipiscing elit. Pellentesque eros\n enim, dictum vitae quam nec, congue feugiat\n neque. Vivamus ut luctus enim."
+        static let big = "The Big Launch"
+        static let gold = "G O L D"
+        static let space = "S P A C E  S H I P S"
+        static let title = "Launches"
+    }
 }

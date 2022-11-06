@@ -34,6 +34,8 @@ final class MainView: UIView {
     }
 
     private func commonInit() {
+        backgroundColor = .white
+        
         bottomColorView.pin(
             .bottom,
             .fixedHeight(bounds.height * 0.33),

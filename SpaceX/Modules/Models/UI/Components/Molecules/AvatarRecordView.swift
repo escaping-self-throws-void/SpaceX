@@ -17,8 +17,8 @@ final class AvatarRecordView: UIView {
     
     private lazy var recordLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: C.Fonts.visbyExtraBold, size: 18)
-        label.text = "2355"
+        label.font = UIFont(name: C.Fonts.latoExtraBold, size: 18)
+        label.text = C.Text.record
         label.textColor = .white
         label.place(on: self)
         return label
@@ -26,8 +26,8 @@ final class AvatarRecordView: UIView {
     
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: C.Fonts.visbyBold, size: 12)
-        label.text = "25 Feb 2022 \n11:25 GMT 5"
+        label.font = UIFont(name: C.Fonts.latoBold, size: 12)
+        label.text = C.Text.date
         label.numberOfLines = 0
         label.textColor = .white
         label.place(on: self)

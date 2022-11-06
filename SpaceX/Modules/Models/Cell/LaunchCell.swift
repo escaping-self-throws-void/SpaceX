@@ -9,6 +9,8 @@ import UIKit
 
 final class LaunchCell: UICollectionViewCell {
     
+    private let launchView = LaunchCellView()
+    
     private lazy var backgroundImage: UIImageView = {
         let imageView = UIImageView()
         let color = UIColor(named: C.Colors.skyBlue) ?? .blue
@@ -17,11 +19,6 @@ final class LaunchCell: UICollectionViewCell {
         return imageView
     }()
     
-    private var launchView: LaunchCellView = {
-        let view = LaunchCellView()
-//        view.place(on: contentView)
-        return view
-    }()
     
 //    override class func awakeFromNib() {
 //        super.awakeFromNib()
@@ -49,6 +46,7 @@ final class LaunchCell: UICollectionViewCell {
         launchView.recordLabel.text = model.flightNumber
         launchView.flightNameLabel.text = model.name
         launchView.dateLabel.text = model.date
+        launchView.indicatorLine.isHidden = !model.upcoming
     }
     
     private func commonInit() {

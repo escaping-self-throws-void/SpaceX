@@ -23,7 +23,7 @@ class BaseCoordinator: Coordinator {
     var navigationController = UINavigationController()
     
     func start() {
-        precondition(false, "Has to be overridden")
+        preconditionFailure("Has to be overridden")
     }
     
     func start(_ coordinator: Coordinator) {
