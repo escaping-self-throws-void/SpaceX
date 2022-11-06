@@ -16,7 +16,6 @@ final class DetailsView: UIView {
         imageView.image = UIImage(named: C.Images.bottom)
         imageView.contentMode = .scaleAspectFill
         imageView.image = UIImage(named: C.Images.cellPlaceholder)
-        imageView.place(on: self)
         return imageView
     }()
     
@@ -29,19 +28,33 @@ final class DetailsView: UIView {
     
     lazy var bottomView: BottomView = {
         let view = BottomView()
-        view.place(on: self)
         return view
     }()
     
     lazy var indicatorLine: IndicatorLine = {
         let view = IndicatorLine()
-        view.place(on: self)
         return view
     }()
-     
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        placeSubviews()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         commonInit()
+    }
+    
+    private func placeSubviews() {
+        backgroundImageView.place(on: self)
+        closeButton.place(on: self)
+        bottomView.place(on: self)
+        indicatorLine.place(on: self)
     }
 
     private func commonInit() {
@@ -53,7 +66,8 @@ final class DetailsView: UIView {
             .fixedHeight(bounds.height * 0.55)
         )
         
-        closeButton.place(on: self).pin(
+        closeButton
+            .pin(
             .top(to: safeAreaLayoutGuide, padding: 20),
             .trailing(padding: 20)
         )

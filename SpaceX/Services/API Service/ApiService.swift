@@ -9,6 +9,7 @@ import Foundation
 
 protocol ApiServiceProtocol {
     func fetchLaunches() async throws -> [Launch]
+    func fetchRocket(id: String) async throws -> Rocket
 }
 
 struct ApiService: HTTPClient, ApiServiceProtocol {
@@ -20,6 +21,11 @@ struct ApiService: HTTPClient, ApiServiceProtocol {
         result += try await upcoming
         result += try await successful.docs
 
+        return result
+    }
+    
+    func fetchRocket(id: String) async throws -> Rocket {
+        let result: Rocket = try await sendRequest(endpoint: ApiEndpoint.rocketDetail(id: id))
         return result
     }
 }

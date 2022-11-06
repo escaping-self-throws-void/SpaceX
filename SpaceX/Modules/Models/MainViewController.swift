@@ -99,7 +99,7 @@ extension MainViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let launch = dataSource.itemIdentifier(for: indexPath) else { return }
-        viewModel.goToDetails(id: launch.rocket)
+        viewModel.goToDetails(launch)
     }
 }
 

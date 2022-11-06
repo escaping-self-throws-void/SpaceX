@@ -31,6 +31,7 @@ final class LaunchCollectionView: UICollectionView {
     }
 
     private func commonInit() {
+        backgroundColor = .clear
         showsHorizontalScrollIndicator = false
         showsVerticalScrollIndicator = false
         launchLayout.itemSize = .init(width: bounds.width / 2.1,

@@ -43,7 +43,8 @@ final class BigLaunchView: UIView {
         imageView.image = UIImage(named: C.Images.bottom)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 8
+        imageView.layer.cornerRadius = 120
+        imageView.layer.maskedCorners = [.layerMaxXMinYCorner]
         return imageView
     }()
     
@@ -75,7 +76,13 @@ final class BigLaunchView: UIView {
         bigTitle.pin(.fixedHeight(30))
         buttonContainer.pin(.fixedHeight(20))
         
-        let finalStack = UIStackView(arrangedSubviews: [bigTitle, buttonContainer, bottomPhoto])
+        let photoContainer = UIView()
+        photoContainer.backgroundColor = UIColor(named: C.Colors.skyBlue)
+        photoContainer.layer.cornerRadius = 8
+        photoContainer.clipsToBounds = true
+        bottomPhoto.place(on: photoContainer).pin(.allEdges)
+        
+        let finalStack = UIStackView(arrangedSubviews: [bigTitle, buttonContainer, photoContainer])
         finalStack.axis = .vertical
         finalStack.spacing = 15
         finalStack.distribution = .fillProportionally

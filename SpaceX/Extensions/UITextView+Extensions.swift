@@ -1,18 +1,20 @@
 //
-//  UILabel+Extensions.swift
+//  UITextView.swift
 //  SpaceX
 //
-//  Created by Paul Matar on 05/11/2022.
+//  Created by Paul Matar on 06/11/2022.
 //
 
 import UIKit
 
-extension UILabel {
+extension UITextView {
     
     func setLineHeight(_ lineHeight: CGFloat) {
-        guard let text else { return }
+        guard let text, let font, let textColor else { return }
         
-        let attributeString = NSMutableAttributedString(string: text)
+        let attributeString = NSMutableAttributedString(string: text,
+                                                        attributes: [.font: font,
+                                                                     .foregroundColor: textColor])
         let style = NSMutableParagraphStyle()
         
         style.lineSpacing = lineHeight
@@ -24,4 +26,3 @@ extension UILabel {
         self.attributedText = attributeString
     }
 }
-

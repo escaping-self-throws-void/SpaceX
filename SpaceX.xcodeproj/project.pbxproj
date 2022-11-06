@@ -31,6 +31,8 @@
 		CF1CABB62912F85B0050A61F /* BadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CABB52912F85B0050A61F /* BadgeButton.swift */; };
 		CF1CABB82912FC280050A61F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CABB72912FC280050A61F /* UIView+Extensions.swift */; };
 		CF3B3F2429145F440092CA79 /* LaunchCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B3F2329145F440092CA79 /* LaunchCollectionView.swift */; };
+		CF77A4182917F409004051A6 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF77A4172917F409004051A6 /* ImageLoader.swift */; };
+		CF77A41E29184251004051A6 /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF77A41D29184251004051A6 /* UITextView+Extensions.swift */; };
 		CFCD56A92912CFD9006BAE51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD56A82912CFD9006BAE51 /* AppDelegate.swift */; };
 		CFCD56AB2912CFD9006BAE51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD56AA2912CFD9006BAE51 /* SceneDelegate.swift */; };
 		CFCD56AD2912CFD9006BAE51 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD56AC2912CFD9006BAE51 /* MainViewController.swift */; };
@@ -52,7 +54,7 @@
 		CFDC702A291708D90096B749 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDC7029291708D90096B749 /* Data+Extensions.swift */; };
 		CFDC702C29170EFE0096B749 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDC702B29170EFE0096B749 /* String+Extensions.swift */; };
 		CFDC702E291711230096B749 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDC702D291711230096B749 /* Date+Extensions.swift */; };
-		CFDC7030291712F00096B749 /* UIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDC702F291712F00096B749 /* UIModel.swift */; };
+		CFDC7030291712F00096B749 /* MainUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDC702F291712F00096B749 /* MainUIModel.swift */; };
 		CFDC7032291782150096B749 /* IndicatorLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDC7031291782150096B749 /* IndicatorLine.swift */; };
 		CFDC70342917B1220096B749 /* GradientImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDC70332917B1220096B749 /* GradientImageView.swift */; };
 		CFDC70382917BB360096B749 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDC70372917BB360096B749 /* DetailsView.swift */; };
@@ -60,6 +62,8 @@
 		CFDC703D2917C8E90096B749 /* TopInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDC703C2917C8E90096B749 /* TopInfoView.swift */; };
 		CFDC70412917CDBC0096B749 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDC70402917CDBC0096B749 /* ButtonsView.swift */; };
 		CFDC70442917D3840096B749 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDC70432917D3840096B749 /* DescriptionView.swift */; };
+		CFDC70462917E34B0096B749 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDC70452917E34B0096B749 /* Rocket.swift */; };
+		CFDC70482917E8EA0096B749 /* DetailsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDC70472917E8EA0096B749 /* DetailsUIModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +91,8 @@
 		CF1CABB52912F85B0050A61F /* BadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeButton.swift; sourceTree = "<group>"; };
 		CF1CABB72912FC280050A61F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		CF3B3F2329145F440092CA79 /* LaunchCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCollectionView.swift; sourceTree = "<group>"; };
+		CF77A4172917F409004051A6 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		CF77A41D29184251004051A6 /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
 		CFCD56A52912CFD9006BAE51 /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCD56A82912CFD9006BAE51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFCD56AA2912CFD9006BAE51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +117,7 @@
 		CFDC7029291708D90096B749 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
 		CFDC702B29170EFE0096B749 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		CFDC702D291711230096B749 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
-		CFDC702F291712F00096B749 /* UIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModel.swift; sourceTree = "<group>"; };
+		CFDC702F291712F00096B749 /* MainUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUIModel.swift; sourceTree = "<group>"; };
 		CFDC7031291782150096B749 /* IndicatorLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorLine.swift; sourceTree = "<group>"; };
 		CFDC70332917B1220096B749 /* GradientImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientImageView.swift; sourceTree = "<group>"; };
 		CFDC70372917BB360096B749 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
@@ -119,6 +125,8 @@
 		CFDC703C2917C8E90096B749 /* TopInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopInfoView.swift; sourceTree = "<group>"; };
 		CFDC70402917CDBC0096B749 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		CFDC70432917D3840096B749 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		CFDC70452917E34B0096B749 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		CFDC70472917E8EA0096B749 /* DetailsUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUIModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +151,9 @@
 		CF1CAB7A2912D6860050A61F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CF1CAB972912DA350050A61F /* HTTPClient */,
-				CFDC70242916F1350096B749 /* ApiService */,
+				CF1CAB972912DA350050A61F /* Network Layer */,
+				CFDC70242916F1350096B749 /* API Service */,
+				CF77A4162917EFAA004051A6 /* Image Loader */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -154,6 +163,7 @@
 			children = (
 				CF1CABB72912FC280050A61F /* UIView+Extensions.swift */,
 				CFCF33FF29169735001A8E04 /* UILabel+Extensions.swift */,
+				CF77A41D29184251004051A6 /* UITextView+Extensions.swift */,
 				CFDC7029291708D90096B749 /* Data+Extensions.swift */,
 				CFDC702B29170EFE0096B749 /* String+Extensions.swift */,
 				CFDC702D291711230096B749 /* Date+Extensions.swift */,
@@ -193,7 +203,7 @@
 			children = (
 				CFCF33CD29159D55001A8E04 /* UI */,
 				CF1946EC291450B500A83E6B /* Cell */,
-				CFDC702F291712F00096B749 /* UIModel.swift */,
+				CFDC702F291712F00096B749 /* MainUIModel.swift */,
 				CF1CAB8C2912D8AF0050A61F /* MainCoordinator.swift */,
 				CF1CAB8F2912D9830050A61F /* MainViewModel.swift */,
 				CFCD56AC2912CFD9006BAE51 /* MainViewController.swift */,
@@ -206,20 +216,21 @@
 			isa = PBXGroup;
 			children = (
 				CFDC70352917BB1B0096B749 /* UI */,
+				CFDC70472917E8EA0096B749 /* DetailsUIModel.swift */,
 				CF1CAB932912D9C30050A61F /* DetailsViewModel.swift */,
 				CF1CAB912912D9A50050A61F /* DetailsViewController.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
 		};
-		CF1CAB972912DA350050A61F /* HTTPClient */ = {
+		CF1CAB972912DA350050A61F /* Network Layer */ = {
 			isa = PBXGroup;
 			children = (
 				CF1CAB952912DA2E0050A61F /* HTTPClient.swift */,
 				CF1CAB982912DA5C0050A61F /* RequestError.swift */,
 				CFDC701B2916EC2F0096B749 /* Endpoint.swift */,
 			);
-			path = HTTPClient;
+			path = "Network Layer";
 			sourceTree = "<group>";
 		};
 		CF1CAB9A2912E6600050A61F /* Lato */ = {
@@ -288,6 +299,14 @@
 			path = Resourses;
 			sourceTree = "<group>";
 		};
+		CF77A4162917EFAA004051A6 /* Image Loader */ = {
+			isa = PBXGroup;
+			children = (
+				CF77A4172917F409004051A6 /* ImageLoader.swift */,
+			);
+			path = "Image Loader";
+			sourceTree = "<group>";
+		};
 		CFCD569C2912CFD9006BAE51 = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				CFDC70182916D4F00096B749 /* Launch.swift */,
+				CFDC70452917E34B0096B749 /* Rocket.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -390,13 +410,13 @@
 			path = Templates;
 			sourceTree = "<group>";
 		};
-		CFDC70242916F1350096B749 /* ApiService */ = {
+		CFDC70242916F1350096B749 /* API Service */ = {
 			isa = PBXGroup;
 			children = (
 				CFDC70222916EF680096B749 /* ApiService.swift */,
 				CFDC70252916F1760096B749 /* ApiEndpoint.swift */,
 			);
-			path = ApiService;
+			path = "API Service";
 			sourceTree = "<group>";
 		};
 		CFDC70352917BB1B0096B749 /* UI */ = {
@@ -529,9 +549,10 @@
 				CF1CABB62912F85B0050A61F /* BadgeButton.swift in Sources */,
 				CF1CAB832912D7A90050A61F /* AutoLayoutDSL.swift in Sources */,
 				CFDC7032291782150096B749 /* IndicatorLine.swift in Sources */,
+				CF77A4182917F409004051A6 /* ImageLoader.swift in Sources */,
 				CFDC70412917CDBC0096B749 /* ButtonsView.swift in Sources */,
 				CF1CAB922912D9A50050A61F /* DetailsViewController.swift in Sources */,
-				CFDC7030291712F00096B749 /* UIModel.swift in Sources */,
+				CFDC7030291712F00096B749 /* MainUIModel.swift in Sources */,
 				CFDC70442917D3840096B749 /* DescriptionView.swift in Sources */,
 				CFDC702A291708D90096B749 /* Data+Extensions.swift in Sources */,
 				CFDC703A2917C6330096B749 /* BottomView.swift in Sources */,
@@ -544,6 +565,8 @@
 				CF3B3F2429145F440092CA79 /* LaunchCollectionView.swift in Sources */,
 				CF1CAB902912D9830050A61F /* MainViewModel.swift in Sources */,
 				CF1CAB872912D8180050A61F /* Coordinator.swift in Sources */,
+				CF77A41E29184251004051A6 /* UITextView+Extensions.swift in Sources */,
+				CFDC70462917E34B0096B749 /* Rocket.swift in Sources */,
 				CFCF340029169735001A8E04 /* UILabel+Extensions.swift in Sources */,
 				CF1CAB8D2912D8AF0050A61F /* MainCoordinator.swift in Sources */,
 				CF1CAB992912DA5C0050A61F /* RequestError.swift in Sources */,
@@ -555,6 +578,7 @@
 				CF1CABB22912E7860050A61F /* Constants.swift in Sources */,
 				CFDC70342917B1220096B749 /* GradientImageView.swift in Sources */,
 				CFDC702E291711230096B749 /* Date+Extensions.swift in Sources */,
+				CFDC70482917E8EA0096B749 /* DetailsUIModel.swift in Sources */,
 				CFCF33D32915C79C001A8E04 /* BorderedAvatarView.swift in Sources */,
 				CF1CAB962912DA2E0050A61F /* HTTPClient.swift in Sources */,
 				CF1946EF2914510000A83E6B /* LaunchCell.swift in Sources */,

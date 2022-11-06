@@ -9,20 +9,19 @@ import UIKit
 
 final class TopInfoView: UIView {
     
-    private lazy var nameLabel: UILabel = {
+    lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: C.Fonts.latoBold, size: 20)
-        label.text = "Columbia launching"
+        label.textColor = .black
         label.textAlignment = .left
         label.place(on: self)
         return label
     }()
     
-    private lazy var recordLabel: UILabel = {
+    lazy var recordLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: C.Fonts.latoBold, size: 20)
         label.textColor = UIColor(named: C.Colors.skyBlue)
-        label.text = "34787"
         label.textAlignment = .right
         label.place(on: self)
         return label

@@ -9,7 +9,7 @@ import UIKit
 
 final class ButtonsView: UIView {
     
-    private lazy var readMoreButton: UIButton = {
+    lazy var readMoreButton: UIButton = {
         let button = UIButton(type: .custom)
         button.backgroundColor = UIColor(named: C.Colors.skyBlue)
         button.setTitle(C.Text.read, for: .normal)
@@ -18,7 +18,7 @@ final class ButtonsView: UIView {
         return button
     }()
     
-    private lazy var shareButton: UIButton = {
+    lazy var shareButton: UIButton = {
         let button = UIButton(type: .custom)
         button.backgroundColor = .clear
         button.setTitle(C.Text.share, for: .normal)

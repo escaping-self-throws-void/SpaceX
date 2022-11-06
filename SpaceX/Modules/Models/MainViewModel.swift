@@ -9,20 +9,20 @@ import Foundation
 import Combine
 
 protocol MainViewModelProtocol {
-    var launches: [LaunchModel] { get }
     var refresh: PassthroughSubject<Bool, Never> { get }
+    var launches: [LaunchModel] { get }
     
     func getLaunches()
-    func goToDetails(id: String)
+    func goToDetails(_ data: Any)
 }
 
 final class MainViewModel: MainViewModelProtocol {
     var refresh = PassthroughSubject<Bool, Never>()
 
-    private let coordinator: MainCoordinator
-    private var service: ApiServiceProtocol
-    
     private(set) var launches = [LaunchModel]()
+    
+    private let coordinator: MainCoordinator
+    private let service: ApiServiceProtocol
     
     init(_ coordinator: MainCoordinator, service: ApiServiceProtocol) {
         self.coordinator = coordinator
@@ -41,13 +41,14 @@ final class MainViewModel: MainViewModelProtocol {
         }
     }
     
-    func goToDetails(id: String) {
-        coordinator.openDetailsScreen(id: id)
+    func goToDetails(_ data: Any) {
+        coordinator.openDetailsScreen(data)
     }
     
     private func mapModels(_ data: [Launch]) {
         launches = data.map { launch in
-            LaunchModel(rocket: launch.rocket,
+            LaunchModel(id: launch.id,
+                        rocket: launch.rocket,
                         name: launch.name,
                         date: launch.dateUTC.getDate.toString,
                         flightNumber: String(launch.flightNumber),

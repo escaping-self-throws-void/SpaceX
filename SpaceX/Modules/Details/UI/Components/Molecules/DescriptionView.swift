@@ -9,22 +9,23 @@ import UIKit
 
 final class DescriptionView: UIView {
     
-    private lazy var dateLabel: UILabel = {
+    lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: C.Fonts.latoRegular, size: 17)
-        label.text = "24 Feb 2022, 11:25 GMT+5"
+        label.textColor = .black
         return label
     }()
     
-    private lazy var descriptionLabel: UILabel = {
-        let label = UILabel()
+    lazy var descriptionLabel: UITextView = {
+        let label = UITextView()
         label.textColor = UIColor(named: C.Colors.silverGrey)
         label.font = UIFont(name: C.Fonts.latoRegular, size: 16)
-        label.adjustsFontSizeToFitWidth = true
-        label.text = "Missions teams are targeting no earlier than February 24, 2022, for the launch of NASA's SpaceX Crew-4 mission to the space station for a six-month science mission aboard the microgravity laboratory."
-        label.numberOfLines = 0
+        label.isSelectable = false
+        label.isEditable = false
+//        label.numberOfLines = 0
+//        label.adjustsFontSizeToFitWidth = true
+//        label.minimumScaleFactor = 0.3
         label.textAlignment = .left
-        label.setLineHeight(10)
         return label
     }()
     
@@ -40,11 +41,23 @@ final class DescriptionView: UIView {
     private func commonInit() {
         dateLabel.pin(.fixedHeight(20))
         
-        let stack = UIStackView(arrangedSubviews: [dateLabel, descriptionLabel])
+        
+        
+        let labelContainer = UIView()
+        descriptionLabel.place(on: labelContainer).pin(
+            .leading(padding: -5),
+            .top(padding: 5),
+            .trailing,
+            .bottom(padding: 5)
+        )
+        
+        let stack = UIStackView(arrangedSubviews: [dateLabel, labelContainer])
         stack.axis = .vertical
         stack.distribution = .fill
         stack.alignment = .fill
-        stack.spacing = 2
+        stack.spacing = 15
         stack.place(on: self).pin(.allEdges)
     }
 }
+
+
