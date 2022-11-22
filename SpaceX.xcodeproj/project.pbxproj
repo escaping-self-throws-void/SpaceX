@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		CF1946EF2914510000A83E6B /* LaunchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1946EE2914510000A83E6B /* LaunchCell.swift */; };
 		CF1CAB832912D7A90050A61F /* AutoLayoutDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CAB822912D7A90050A61F /* AutoLayoutDSL.swift */; };
-		CF1CAB872912D8180050A61F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CAB862912D8180050A61F /* Coordinator.swift */; };
-		CF1CAB892912D8490050A61F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CAB882912D8490050A61F /* BaseCoordinator.swift */; };
+		CF1CAB872912D8180050A61F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CAB862912D8180050A61F /* BaseCoordinator.swift */; };
+		CF1CAB892912D8490050A61F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CAB882912D8490050A61F /* AppCoordinator.swift */; };
 		CF1CAB8D2912D8AF0050A61F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CAB8C2912D8AF0050A61F /* MainCoordinator.swift */; };
 		CF1CAB902912D9830050A61F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CAB8F2912D9830050A61F /* MainViewModel.swift */; };
 		CF1CAB922912D9A50050A61F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1CAB912912D9A50050A61F /* DetailsViewController.swift */; };
@@ -69,8 +69,8 @@
 /* Begin PBXFileReference section */
 		CF1946EE2914510000A83E6B /* LaunchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCell.swift; sourceTree = "<group>"; };
 		CF1CAB822912D7A90050A61F /* AutoLayoutDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutDSL.swift; sourceTree = "<group>"; };
-		CF1CAB862912D8180050A61F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		CF1CAB882912D8490050A61F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		CF1CAB862912D8180050A61F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		CF1CAB882912D8490050A61F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CF1CAB8C2912D8AF0050A61F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		CF1CAB8F2912D9830050A61F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		CF1CAB912912D9A50050A61F /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -192,8 +192,8 @@
 		CF1CAB852912D80D0050A61F /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				CF1CAB862912D8180050A61F /* Coordinator.swift */,
-				CF1CAB882912D8490050A61F /* BaseCoordinator.swift */,
+				CF1CAB862912D8180050A61F /* BaseCoordinator.swift */,
+				CF1CAB882912D8490050A61F /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -564,7 +564,7 @@
 				CF1CABB82912FC280050A61F /* UIView+Extensions.swift in Sources */,
 				CF3B3F2429145F440092CA79 /* LaunchCollectionView.swift in Sources */,
 				CF1CAB902912D9830050A61F /* MainViewModel.swift in Sources */,
-				CF1CAB872912D8180050A61F /* Coordinator.swift in Sources */,
+				CF1CAB872912D8180050A61F /* BaseCoordinator.swift in Sources */,
 				CF77A41E29184251004051A6 /* UITextView+Extensions.swift in Sources */,
 				CFDC70462917E34B0096B749 /* Rocket.swift in Sources */,
 				CFCF340029169735001A8E04 /* UILabel+Extensions.swift in Sources */,
@@ -572,7 +572,7 @@
 				CF1CAB992912DA5C0050A61F /* RequestError.swift in Sources */,
 				CFCF34042916A365001A8E04 /* BottomStaticView.swift in Sources */,
 				CFCF33FC29168BEB001A8E04 /* AvatarRecordView.swift in Sources */,
-				CF1CAB892912D8490050A61F /* BaseCoordinator.swift in Sources */,
+				CF1CAB892912D8490050A61F /* AppCoordinator.swift in Sources */,
 				CFDC70192916D4F00096B749 /* Launch.swift in Sources */,
 				CFCF33FE29168BF4001A8E04 /* StaticTextView.swift in Sources */,
 				CF1CABB22912E7860050A61F /* Constants.swift in Sources */,
