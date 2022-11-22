@@ -668,6 +668,7 @@
 		};
 		CFCD56B82912CFE1006BAE51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFDC701A2916E9710096B749 /* AppConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
